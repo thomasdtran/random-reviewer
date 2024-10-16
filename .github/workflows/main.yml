@@ -7,9 +7,9 @@ jobs:
     runs-on: ubuntu-latest
     name: Assign random reviewer
     steps:
-      - name: Hello world action step
+      - name: Get reviewer
         id: hello
-        uses: thomasdtran/random-reviewer
+        uses: ./github/workflows/round-robin
    
-      - name: Get the output time
+      - name: Print out the reviewer
         run: echo "The time was ${{ steps.hello.outputs.reviewer }}"
