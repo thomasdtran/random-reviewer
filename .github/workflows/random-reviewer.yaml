@@ -13,6 +13,6 @@ jobs:
       - name: Assign random reviewer
         uses: thomasdtran/random-reviewer@main
         with:
-          reviewers: ['thomasdtran']
+          reviewers: "['thomasdtran']" 
           repo: ${{ github.event.repository.name }}
           token: ${{ secrets.GITHUB_TOKEN }}
