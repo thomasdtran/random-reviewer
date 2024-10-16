@@ -6,13 +6,16 @@ on:
 
 jobs:
 
-  annotate-pr:
+  random-reviewer:
     runs-on: ubuntu-latest
     name: Assigns random reviewer to a PR
     steps:
       - name: Assign random reviewer
         uses: thomasdtran/random-reviewer@main
+        id: reviewer
         with:
           reviewers: "['thomasdtran']" 
           repo: ${{ github.event.repository.name }}
           token: ${{ secrets.GITHUB_TOKEN }}
+      - name: Print reviewer
+        run: echo "Assigned reviewer is ${{steps.reviewer.assigned}}"
