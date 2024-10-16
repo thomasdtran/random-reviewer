@@ -1,0 +1,15 @@
+on:
+  pull_requests:
+  types: [opened]
+
+jobs:
+  hello_world_job:
+    runs-on: ubuntu-latest
+    name: Assign random reviewer
+    steps:
+      - name: Hello world action step
+        id: hello
+        uses: thomasdtran/random-reviewer
+   
+      - name: Get the output time
+        run: echo "The time was ${{ steps.hello.outputs.reviewer }}"
