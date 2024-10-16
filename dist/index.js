@@ -31815,10 +31815,10 @@ const core = __nccwpck_require__(1238);
 const github = __nccwpck_require__(1310);
 
 try{
-    const reviewers = core.getInput('reviewers')
+    const reviewers = JSON.parse(core.getInput('reviewers'))
 
     core.setOutput('assigned', reviewers[0])
-    
+
 }catch(error){
     core.setFailed(error.message)
 }

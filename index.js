@@ -2,7 +2,7 @@ const core = require('@actions/core');
 const github = require('@actions/github');
 
 try{
-    const reviewers = core.getInput('reviewers').json
+    const reviewers = JSON.parse(core.getInput('reviewers'))
 
     core.setOutput('assigned', reviewers[0])
 
