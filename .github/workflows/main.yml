@@ -7,9 +7,12 @@ jobs:
     runs-on: ubuntu-latest
     name: Assign random reviewer
     steps:
-      - name: Get reviewer
-        id: hello
-        uses: ./github/workflows/round-robin
+      - name: Checkout Code
+        uses: actions/checkout@v3
+
+      - name: Get reviewer with round-robin algorithm
+        id: round-robin
+        uses: ./github/actions/round-robin
    
       - name: Print out the reviewer
-        run: echo "The time was ${{ steps.hello.outputs.reviewer }}"
+        run: echo "The time was ${{ steps.round-robin.outputs.reviewer }}"
