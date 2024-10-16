@@ -1,8 +1,0 @@
-name: 'Random Reviewer'
-description: 'Assigns a random reviewer to PRs from Dependabot'
-outputs:
-  reviewer: # id of output
-    description: 'The user name of the reviewer'
-runs:
-  using: 'node20'
-  main: 'dist/index.js'
