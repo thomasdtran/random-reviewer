@@ -1,9 +1,9 @@
 on:
-  pull_requests:
+  pull_request:
     types: [opened]
 
 jobs:
-  hello_world_job:
+  random-reviewer:
     runs-on: ubuntu-latest
     name: Assign random reviewer
     steps:
