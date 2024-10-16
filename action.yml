@@ -1,0 +1,13 @@
+name: 'PR random reviewer'
+description: 'Assigns a random reviewer to a PR'
+inputs:
+  reviewers:
+    descriptions: 'The list of reviewers to choose from'
+    required: true
+  repo:
+    description: 'The name of the repository'
+  token:
+    description: 'The token to use to access the GitHub API'
+runs:
+  using: 'node20'
+  main: 'index.js'
