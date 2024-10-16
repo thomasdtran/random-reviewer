@@ -1,1 +1,1 @@
-# random-reveiwer
+# random-reviewer
